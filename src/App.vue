@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <Header></Header>
-    我是跟组件
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 const Header = () => import('@/components/header/index.vue')
+const Footer = () => import('@/components/footer/index')
+
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>

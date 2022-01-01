@@ -11,6 +11,7 @@
             <li>常见问题</li>
             <li>购物指南</li>
           </ul>
+
         </div>
         <div class="footerItem">
           <h4>配送方式</h4>
@@ -54,45 +55,36 @@
         </div>
         <div class="footerItem">
           <h4>帮助中心</h4>
-          <img src="./images/wx_cz.jpg"/>
+          <img src="./images/wx_cz.jpg">
         </div>
       </div>
       <div class="copyright">
         <ul class="helpLink">
-          <li>
-            关于我们
+          <li>关于我们
             <span class="space"></span>
           </li>
-          <li>
-            联系我们
+          <li>联系我们
             <span class="space"></span>
           </li>
-          <li>
-            关于我们
+          <li>关于我们
             <span class="space"></span>
           </li>
-          <li>
-            商家入驻
+          <li>商家入驻
             <span class="space"></span>
           </li>
-          <li>
-            营销中心
+          <li>营销中心
             <span class="space"></span>
           </li>
-          <li>
-            友情链接
+          <li>友情链接
             <span class="space"></span>
           </li>
-          <li>
-            关于我们
+          <li>关于我们
             <span class="space"></span>
           </li>
-          <li>
-            营销中心
+          <li>营销中心
             <span class="space"></span>
           </li>
-          <li>
-            友情链接
+          <li>友情链接
             <span class="space"></span>
           </li>
           <li>关于我们</li>
