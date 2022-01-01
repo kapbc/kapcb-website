@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <header></header>
+    <Header></Header>
+    我是跟组件
   </div>
 </template>
 
 <script>
-import Header from './components/header/index.vue'
+const Header = () => import('@/components/header/index.vue')
 
 export default {
   name: 'App',

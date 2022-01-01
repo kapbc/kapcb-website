@@ -5,22 +5,15 @@
       <div class="container">
         <div class="loginList">
           <p>尚品汇欢迎您！</p>
-          <!-- 没有用户名：未登录 -->
-          <p v-if="!userName">
+          <p>
             <span>请</span>
-            <!-- 声明式导航：router-link务必要有to属性 -->
-            <router-link to="/login">登录</router-link>
-            <router-link class="register" to="/register">免费注册</router-link>
-          </p>
-          <!-- 登录了 -->
-          <p v-else>
-            <a>{{ userName }}</a>
-            <a class="register" @click="logout">退出登录</a>
+            <a href="###">登录</a>
+            <a href="###" class="register">免费注册</a>
           </p>
         </div>
         <div class="typeList">
-          <router-link to="/center/myorder">我的订单</router-link>
-          <router-link to="/shopcart">我的购物车</router-link>
+          <a href="###">我的订单</a>
+          <a href="###">我的购物车</a>
           <a href="###">我的尚品汇</a>
           <a href="###">尚品汇会员</a>
           <a href="###">企业采购</a>
@@ -33,25 +26,14 @@
     <!--头部第二行 搜索区域-->
     <div class="bottom">
       <h1 class="logoArea">
-        <!-- router-link组件本省就是一个a标签 -->
-        <router-link to="/home" class="logo">
-          <img src="./images/logo.png" alt=""/>
-        </router-link>
+        <a class="logo" title="尚品汇" href="###" target="_blank">
+          <img src="./images/logo.png" alt="">
+        </a>
       </h1>
       <div class="searchArea">
         <form action="###" class="searchForm">
-          <input
-              type="text"
-              id="autocomplete"
-              class="input-error input-xxlarge"
-              v-model="keyword"
-          />
-          <button
-              class="sui-btn btn-xlarge btn-danger"
-              type="button"
-              @click="goSearch">
-            搜索
-          </button>
+          <input type="text" id="autocomplete" class="input-error input-xxlarge"/>
+          <button class="sui-btn btn-xlarge btn-danger" type="button">搜索</button>
         </form>
       </div>
     </div>
