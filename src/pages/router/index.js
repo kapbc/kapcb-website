@@ -55,6 +55,23 @@ export default new VueRouter({
       component: search,
       meta: {
         showFooter: true
+      },
+      // 配置路由组件可以传递props数据, 但是路由传递参数的类型必须是params参数
+      // 布尔值写法 : params
+      // props: true
+
+      // 对象写法 : 额外的给路由组件传递一些 props
+      // props: {
+      //   keyword: 'kapcb nb',
+      //   description: 'by order of awesome mike'
+      // }
+
+      // 函数写法 : 可以params参数、query参数、通过props传递给路由组件, 函数中会将路由参数进行注入
+      props: ($route) => {
+        return {
+          keyword: $route.params.keyword,
+          description: 'by order of awesome mike'
+        }
       }
     }
   ]

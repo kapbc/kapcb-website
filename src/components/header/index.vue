@@ -59,10 +59,12 @@ export default {
       // 对象写法。 对象写法路由跳转时, 可以是name(匿名路由)、path的形式, 但是需要注意path这种写法不能于params参数一起使用
       // 如果路由要求传递params参数, 可以在指定路由的时候在传递参数的key后面添加?代表params参数可传可不传
       // 当传递的参数为空字符串时, 使用undefined解决 : params参数可以传递、不传递或空字符串
-      // this.$router.push({ name: 'Search', params: { keyword: this.keyword || undefined } })
+      this.$router.push({ name: 'Search', params: { keyword: this.keyword || undefined } })
 
       // 使用路由组件传递props数据, 有三种写法
-      // 1.
+      // 1.布尔值写法 : 在配置路由的时候添加属性 props : true
+
+      // 2.对象写法 :
 
     },
   }
