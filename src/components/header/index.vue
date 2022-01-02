@@ -49,17 +49,21 @@ export default {
     }
   },
   methods: {
-    // 点击搜索按钮, 跳转 search 结果页, 同时请求接口进行搜索
+    // 点击搜索按钮, 跳转search结果页, 同时请求接口进行搜索
     search () {
       // 跳转搜索页面
       console.log(this.keyword)
       console.log(this.$route.path)
-      if (this.keyword !== '' && this.$route.path !== '/search') {
-        // 模板字符串
-        // this.$router.push(`/search/${this.keyword}`)
-        // 对象写法
-        this.$router.push({ name: 'Search', params: { keyword: this.keyword } })
-      }
+      // 模板字符串
+      // this.$router.push(`/search/${this.keyword}`)
+      // 对象写法。 对象写法路由跳转时, 可以是name(匿名路由)、path的形式, 但是需要注意path这种写法不能于params参数一起使用
+      // 如果路由要求传递params参数, 可以在指定路由的时候在传递参数的key后面添加?代表params参数可传可不传
+      // 当传递的参数为空字符串时, 使用undefined解决 : params参数可以传递、不传递或空字符串
+      // this.$router.push({ name: 'Search', params: { keyword: this.keyword || undefined } })
+
+      // 使用路由组件传递props数据, 有三种写法
+      // 1.
+
     },
   }
 }
