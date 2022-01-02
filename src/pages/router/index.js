@@ -19,27 +19,43 @@ export default new VueRouter({
     {
       name: 'Home',
       path: '/',
-      redirect: '/home'
+      redirect: '/home',
+      // 在 meta 中配置当前路由所代表的页面是否需要显示footer
+      meta: {
+        showFooter: true
+      }
     },
     {
       name: 'Home',
       path: '/home',
-      component: home
+      component: home,
+      meta: {
+        showFooter: true
+      }
     },
     {
       name: 'Login',
       path: '/login',
-      component: login
+      component: login,
+      meta: {
+        showFooter: false
+      }
     },
     {
       name: 'Register',
       path: '/register',
-      component: register
+      component: register,
+      meta: {
+        showFooter: false
+      }
     },
     {
       name: 'Search',
       path: '/search',
-      component: search
+      component: search,
+      meta: {
+        showFooter: true
+      }
     }
   ]
 })

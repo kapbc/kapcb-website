@@ -26,13 +26,13 @@
     <!--头部第二行 搜索区域-->
     <div class="bottom">
       <h1 class="logoArea">
-        <router-link class="logo" to="/home">
+        <router-link class="logo" to="/home">返回首页
           <img src="./images/logo.png" alt="">
         </router-link>
       </h1>
       <div class="searchArea">
         <form action="###" class="searchForm">
-          <input type="text" id="autocomplete" class="input-error input-xxlarge"/>
+          <input type="text" id="autocomplete" class="input-error input-xxlarge" v-model="keyword"/>
           <button class="sui-btn btn-xlarge btn-danger" type="button" @click="search">Search</button>
         </form>
       </div>
@@ -43,11 +43,19 @@
 <script>
 export default {
   name: 'index',
+  data () {
+    return {
+      keyword: ''
+    }
+  },
   methods: {
     // 点击搜索按钮, 跳转 search 结果页, 同时请求接口进行搜索
     search () {
       // 跳转搜索页面
-      this.$router.push('/search')
+      console.log(this.keyword)
+      if (this.keyword !== '' && this.$route.path !== '/search') {
+        this.$router.push('/search/'+this.keyword)
+      }
     },
   }
 }
