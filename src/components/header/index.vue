@@ -53,8 +53,9 @@ export default {
     search () {
       // 跳转搜索页面
       console.log(this.keyword)
+      console.log(this.$route.path)
       if (this.keyword !== '' && this.$route.path !== '/search') {
-        this.$router.push('/search/'+this.keyword)
+        this.$router.push('/search/' + this.keyword)
       }
     },
   }
