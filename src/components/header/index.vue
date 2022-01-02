@@ -55,7 +55,10 @@ export default {
       console.log(this.keyword)
       console.log(this.$route.path)
       if (this.keyword !== '' && this.$route.path !== '/search') {
-        this.$router.push('/search/' + this.keyword)
+        // 模板字符串
+        // this.$router.push(`/search/${this.keyword}`)
+        // 对象写法
+        this.$router.push({ name: 'Search', params: { keyword: this.keyword } })
       }
     },
   }
