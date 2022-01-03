@@ -5,16 +5,24 @@
     <categoryNav></categoryNav>
 
     <container></container>
+
+    <recommend></recommend>
+
+    <rank></rank>
   </div>
 </template>
 
 <script>
 const container = () => import('@/pages/home/container/index')
+const recommend = () => import('@/pages/home/recommend/index')
+const rank = () => import('@/pages/home/rank/index')
 
 export default {
   name: 'home',
   components: {
-    container
+    container,
+    recommend,
+    rank
   }
 }
 
