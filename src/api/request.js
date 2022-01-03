@@ -28,3 +28,5 @@ axiosInstance.interceptors.response.use(
     return Promise.reject(new Error('fail'))
   })
 
+// 对外暴露二次封装后的axios
+export default axiosInstance
