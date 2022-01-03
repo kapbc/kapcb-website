@@ -9,6 +9,12 @@
     <recommend></recommend>
 
     <rank></rank>
+
+    <like></like>
+
+    <floor></floor>
+
+    <brand></brand>
   </div>
 </template>
 
@@ -16,13 +22,19 @@
 const container = () => import('@/pages/home/container/index')
 const recommend = () => import('@/pages/home/recommend/index')
 const rank = () => import('@/pages/home/rank/index')
+const like = () => import('@/pages/home/like/index')
+const floor = () => import('@/pages/home/floor/index')
+const brand = () => import('@/pages/home/brand/index')
 
 export default {
   name: 'home',
   components: {
     container,
     recommend,
-    rank
+    rank,
+    like,
+    floor,
+    brand
   }
 }
 
