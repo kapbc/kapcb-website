@@ -27,6 +27,7 @@ VueRouter.prototype.push = function (location, resolve, reject) {
     // this为当前调用push方法的vue组件实例
     originalVueRouterPush.call(this, location, resolve, reject)
   } else {
+    // 如果没有传递成功和失败回调给promise, 则手动传递两个, 消除警告
     originalVueRouterPush.call(this, location,
       () => {
       },
