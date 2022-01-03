@@ -18,6 +18,7 @@ export default {
       searchDescription: this.$props.description
     }
   },
+
   props:
       {
         keyword: {
