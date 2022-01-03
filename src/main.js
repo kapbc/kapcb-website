@@ -6,6 +6,10 @@ import router from '@/pages/router/index'
 // 注册全局组件
 const categoryNav = () => import('@/pages/home/nav/index')
 
+// import { category } from '@/api/home'
+//
+// category()
+
 // 第一个参数 : 全局组件的名称
 // 第二个参数 : 组件
 Vue.component(categoryNav.name, categoryNav)
