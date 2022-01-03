@@ -7,16 +7,16 @@
         <div class="swiper-container" id="mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="./images/home/banner1.jpg"/>
+              <img src="../nav/images/banner1.jpg"/>
             </div>
             <div class="swiper-slide">
-              <img src="./images/home/banner2.jpg"/>
+              <img src="../nav/images/banner2.jpg"/>
             </div>
             <div class="swiper-slide">
-              <img src="./images/home/banner3.jpg"/>
+              <img src="../nav/images/banner3.jpg"/>
             </div>
             <div class="swiper-slide">
-              <img src="./images/home/banner4.jpg"/>
+              <img src="../nav/images/banner4.jpg">
             </div>
           </div>
           <!-- 如果需要分页器 -->
@@ -103,7 +103,7 @@
           </li>
         </ul>
         <div class="ads">
-          <img src="./images/home/ad1.png"/>
+          <img src="../nav/images/ad1.png"/>
         </div>
       </div>
     </div>
@@ -189,7 +189,7 @@ export default {
           width: 25%;
 
           .list-item {
-            background-image: url(../images/home/icons.png);
+            background-image: url(../nav/images/icons.png);
             width: 61px;
             height: 40px;
             display: block;
