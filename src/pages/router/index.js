@@ -13,10 +13,13 @@ const search = () => import('@/pages/search/index')
 
 // 重写VueRouter原型对象的push方法解决编程式路由跳转连续点击promise错误回调
 // 先将VueRouter原型对象上的push方法进行备份, 因为最终使用的还是原型对象上的push方法
-let originalVueRouterPush = VueRouter.prototype.push
+let originalPush = VueRouter.prototype.push
+let originalReplace = VueRouter.prototype.replace
 
 // 重写push|replace方法
 // 第一个参数 : 告诉原来push方法, 需要跳转的location
+// 第二个参数 : 成功的回调函数
+// 第三个参数 : 失败的回调函数
 VueRouter.prototype.push = function (location, resolve, reject) {
 
   // 如果传递了成功回调函数与失败回调函数
@@ -25,10 +28,10 @@ VueRouter.prototype.push = function (location, resolve, reject) {
     // 相同点 : 都可以调用函数一次, 都可以篡改函数的上下文一次
     // 不同点 : call与apply传递参数的方式不同, call传递多个参数使用','隔开, 而apply传递多个参数使用数组
     // this为当前调用push方法的vue组件实例
-    originalVueRouterPush.call(this, location, resolve, reject)
+    originalPush.call(this, location, resolve, reject)
   } else {
     // 如果没有传递成功和失败回调给promise, 则手动传递两个, 消除警告
-    originalVueRouterPush.call(this, location,
+    originalPush.call(this, location,
       () => {
       },
       () => {
@@ -37,6 +40,17 @@ VueRouter.prototype.push = function (location, resolve, reject) {
 
 }
 
+VueRouter.prototype.replace = function (location, resolve, reject) {
+  if (resolve && reject) {
+    originalReplace.call(this, location, resolve, reject)
+  } else {
+    originalReplace.call(this, location,
+      () => {
+      },
+      () => {
+      })
+  }
+}
 
 // 配置路由
 // 全局暴露 VueRouter 组件
